@@ -1,0 +1,24 @@
+# OpenLDAP Slapd Configuration
+# ============================
+#
+# The file slapd.conf.in generates slapd.conf. Are you editing the right file?
+
+# Schema
+include ${ldap-settings:core-schema}
+include ${ldap-settings:cosine-schema}
+
+# Runtime
+pidfile ${buildout:directory}/var/slapd.pid
+argsfile ${buildout:directory}/var/slapd.args
+loglevel trace args stats
+logfile ${buildout:directory}/var/slapd.log
+
+# Backend database
+moduleload back_bdb
+database bdb
+suffix "dc=localhost"
+directory ${buildout:directory}/var/db/dc=localhost
+dbconfig set_cachesize 0 268435456 1
+dbconfig set_lg_regionmax 262144
+dbconfig set_lg_bsize 2097152
+index objectClass eq

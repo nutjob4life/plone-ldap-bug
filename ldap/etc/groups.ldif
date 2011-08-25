@@ -1,0 +1,7 @@
+# A test group of managers, with one twit of a manger.
+dn: cn=Managers,dc=localhost
+cn: Managers
+objectClass: groupOfUniqueNames
+objectClass: top
+uniqueMember: uid=vivian,dc=localhost
+

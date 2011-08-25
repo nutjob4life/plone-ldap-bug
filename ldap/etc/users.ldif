@@ -1,0 +1,9 @@
+# Test user "vivian" with password "twit"
+dn: uid=vivian,dc=localhost
+cn: Vivian Smith-Smythe-Smith
+objectClass: uidObject
+objectClass: person
+objectClass: top
+sn: Smith-Smythe-Smith
+uid: vivian
+userPassword: {SHA}L6LI9eoaNnrQdPgShEHI3I2uOjI=

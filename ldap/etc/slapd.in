@@ -1,0 +1,10 @@
+#!/bin/sh
+#
+# slapd.in
+# ========
+#
+# Launch script for OpenLDAP standalone LDAP server, slapd.
+#
+# Note that slapd.in generates slapd. Are you editing the right file?
+
+exec ${ldap-settings:slapd} -f ${slapd.conf:output} -h ldap://localhost:${ldap-settings:port} -d 0

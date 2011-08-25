@@ -1,0 +1,5 @@
+# Root of directory tree "dc=localhost"
+dn: dc=localhost
+dc: localhost
+objectClass: top
+objectClass: domain
